@@ -1,0 +1,62 @@
+body {
+	background-image: url("https://trello-backgrounds.s3.amazonaws.com/53baf533e697a982248cd73f/4200x4200/48dbf0b5a546541e847e267a5dcd2201/shutterstock_134707556.jpg");
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+.gray {
+	background-color: #e2e4e6;
+	border-radius: 3px;
+	margin: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.task {
+	background-color: #fff;
+	margin: 6px;
+}
+
+.board-picture {
+	width: 95%;
+	/*NOT WORKING:*/
+	margin: 1px auto;
+}
+
+.menu {
+	text-align: center;
+	font-weight: bold;
+	color: #4d4d4d;
+	background-color: #edeff0;
+	height: 500px;
+	/*margin: 13px 30px 9pt;*/
+}
+
+nav .btn {
+	background: 0 0;
+}
+
+div .btn {
+	border: 0;
+}
+
+nav .btn:hover {
+	background-color: rgba(300,300,300,0.2)
+}
+
+/*NOT WORKING*/
+div .login {
+	background-color: rgba(300,300,300,0.2)
+}
+
+div .subscribe {
+	background-color: #5aac44;
+
+}
+
+div .login,
+div .subscribe,
+nav .btn {
+	color: #FFF;
+	font-weight: 700;
+}

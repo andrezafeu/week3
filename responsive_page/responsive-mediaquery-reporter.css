@@ -1,0 +1,31 @@
+/*Show a larger image when you're on a big screen*/
+
+@media screen and (max-width: 399px) {
+	.column {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.column {
+		width: 49%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.column {
+		width: 33%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.column {
+		width: 24%;
+	}
+	body {
+		background-image: 
+	}
+	body:after {
+		content: "1024 and up";
+	}
+}

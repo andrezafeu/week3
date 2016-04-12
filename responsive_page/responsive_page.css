@@ -1,0 +1,26 @@
+nav {
+	background-color: #123456;
+	color: #FFF;
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.first-column {
+	background-color: #753686;
+}
+
+.second-column {
+	background-color: #952675;
+}
+
+.column {
+	float: left;
+}
+
+.third-column {
+	background-color: #946068;
+}
+
+.fourth-column {
+	background-color: #934927;
+}

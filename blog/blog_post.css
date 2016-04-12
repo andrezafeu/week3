@@ -1,0 +1,19 @@
+nav {
+	background-color: #123456;
+	color: #FFF;
+}
+
+.container {
+	margin-left: 50px;
+}
+
+.post-body {
+	margin-left: 10%;
+	background-color: #DDEEFF;
+	float:left;
+}
+
+.sidebar {
+	background-color: #CCDDEE;
+	float: left;
+}

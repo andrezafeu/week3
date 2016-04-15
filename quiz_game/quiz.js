@@ -3,6 +3,7 @@ var Question = require('./question.js');
 
 var count = 1;
 
+var totalScore = 0;
 
 question1 = new Question("What's your name?\n>", "Andreza", 1);
 question2 = new Question("Is Miami a big city?", "Yes", 2);
@@ -17,7 +18,8 @@ function displayAnswer (err, input){
     } else {
 		currentQuestion.checkAnswer(input);
 		if (currentQuestion.correctAnswer !== input) {
-			read(currentQuestion,displayAnswer)
+			read(currentQuestion,displayAnswer);
+			totalScore = totalScore - parseInt(currentQuestion.points);
 		} else {
 	    	count = count + 1;
 	    	if (count <=5) {
@@ -25,6 +27,7 @@ function displayAnswer (err, input){
 				read(currentQuestion,displayAnswer)
 	    	} else {
 				console.log("You've finished the Quiz! Congratulations!")
+				console.log(totalScore);
 	    	}
 	    }
     }
@@ -33,7 +36,10 @@ function displayAnswer (err, input){
 Question.prototype.checkAnswer = function(input) {
 	if (currentQuestion.correctAnswer !== input) {
 		console.log("Incorrect Answer. Try again.");
+		totalScore = totalScore - parseInt(this.points);
+
 	}
 	console.log("Your answer is: " + input);
+	totalScore = totalScore + parseInt(currentQuestion.points);
 };
 read(currentQuestion,displayAnswer)

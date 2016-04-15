@@ -43,6 +43,9 @@ function checkAnswer(input) {
 	}
 }
 
+while (count <= 5) {
 	currentQuestion = eval("question"+count)
 	read(currentQuestion,displayName)
 	count = count + 1;
+} 
+	console.log("You've finished the Quiz! Congratulations!")

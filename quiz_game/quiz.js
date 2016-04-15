@@ -15,23 +15,25 @@ function displayAnswer (err, input){
 	if (err) {
         throw err;
     } else {
-    		currentQuestion.checkAnswer(input);
-    		count = count + 1;
-    	if (count <=5) {
-			currentQuestion = eval("question"+count)
+		currentQuestion.checkAnswer(input);
+		if (currentQuestion.correctAnswer !== input) {
 			read(currentQuestion,displayAnswer)
-    	} else {
-			console.log("You've finished the Quiz! Congratulations!")
-    	}
+		} else {
+	    	count = count + 1;
+	    	if (count <=5) {
+				currentQuestion = eval("question"+count)
+				read(currentQuestion,displayAnswer)
+	    	} else {
+				console.log("You've finished the Quiz! Congratulations!")
+	    	}
+	    }
     }
 }	
 
 Question.prototype.checkAnswer = function(input) {
 	if (currentQuestion.correctAnswer !== input) {
-		console.log("Incorrect Answer");
-	} else {
-		console.log("Your answer is: " + input)
+		console.log("Incorrect Answer. Try again.");
 	}
-}
-
+	console.log("Your answer is: " + input);
+};
 read(currentQuestion,displayAnswer)

@@ -42,6 +42,9 @@ Episode.prototype.print = function(){
 		stars = stars + "*"
 	}
 	console.log(stars);
+}
+
+Episode.prototype.ratings = function() {
 
 }
 
@@ -54,7 +57,6 @@ EpisodeList.prototype.printEpisodes = function(){
 		episode.print();
 	})
 }
-
 
 // var episode1 = new Episode(episodes[0]);
 // var episode2 = new Episode("Winter has been here", 2, "Winter came", 8.5)
